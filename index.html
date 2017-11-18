@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>twitter</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="containerHeader">
+        <ul class="nav">
+          <li class="iconSelect"><i class="fa fa-home" aria-hidden="true"></i>Inicio</li>
+          <li><i class="fa fa-bell colorIcon" aria-hidden="true"></i>Notificaciones</li>
+          <li><i class="fa fa-envelope-o colorIcon" aria-hidden="true"></i>Mensajes</li>
+        </ul>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <div class="input">
+          <input type="text" name="" value="" placeholder="Buscar en twitter">
+          <i class="fa fa-search colorIcon" aria-hidden="true"></i>
+          <button type="button">Twittear</button>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="containerSection">
+
+        <div class="infoUser">
+          <div class="cuadrado">
+          </div>
+          <div class="circulo">
+            <span>G</span>
+          </div>
+          <div class="datos">
+            <h3>@gabbmf</h3>
+            <p>Hello, <br> I am graphic designer and front end developer jr. <b> :)</b> </p>
+          </div>
+        </div>
+
+        <div class="areaCentral">
+          <form class="textarea" method="post">
+            <textarea type='text'   id="texto" placeholder="¿Qué está pasando?"></textarea>
+            <div class="botones">
+              <button id="boton" type="button" class="btn">tweet</button>
+              <div id='restante' style="background:white;">140</div>
+            </div>
+          </form>
+          <div>
+            <ul id='nuevoEspacio'></ul>
+
+          </div>
+        </div>
+
+        <div class="news">
+          <h3>Tendencias para ti :D</h3>
+          <h4>#ClaroQueVamos</h4>
+          <h5>¡Sueño cumplido, la blanquirroja en el mundial!</h5>
+          <h4>#PeruAlMundial</h4>
+          <h5>@Capital967 esta twitteando sobre esto</h5>
+          <h4>NED2017</h4>
+          <h5>2.329 Tweets</h5>
+        </div>
+
+
+      </div>
+
+    </section>
+    <script type="text/javascript" src="js/app.js">
+
+    </script>
+  </body>
+</html>
