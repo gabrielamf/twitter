@@ -223,6 +223,7 @@ form textarea {
   font-weight: 300;
   padding: .5em .5em;
   margin-bottom: .5em;
+  resize: none;
 }
 
 form .botones button {
