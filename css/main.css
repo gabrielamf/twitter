@@ -224,6 +224,7 @@ form textarea {
   padding: .5em .5em;
   margin-bottom: .5em;
   resize: none;
+  overflow: hidden;
 }
 
 form .botones button {

@@ -21,6 +21,12 @@ window.addEventListener('load',function() {
     contador = area.value.length;
     restante.textContent = max - contador;
 
+    if (contador > 0 && contador <= 140) {
+      boton.disabled = false;
+    } else {
+      boton.disabled = true;
+    }
+
 
     if (contador >= 120 && contador <= 130){
       restante.style.color='#ff0000';
@@ -31,16 +37,13 @@ window.addEventListener('load',function() {
     }
   }
 
-  function  showText(event) {
+  function  showText() {
 
-    if (area.value.lenght === 0) {
-      console.log(event.target)
-      boton.removeEventListener('click',showText);
-    }
 
     if(area.value) {
       var li = document.createElement('li');
-      li.textContent = area.value;
+
+      li.textContent = addTime() + area.value;
       lista.appendChild(li);
 
       area.value = '';
@@ -54,15 +57,17 @@ window.addEventListener('load',function() {
     //area.style.cssText = 'height:130px';
     area.style.cssText = 'height:' + area.scrollHeight + 'px';
   }
+
+  function addTime(){
+  var date = new Date();
+  var hour = date.getHours();
+  var minute = date.getMinutes();
+
+    if (minute < 10) {
+      minute = '0' + minute;
+    }
+
+  var tweetTime = hour + ' : ' + minute + ' ';
+  return tweetTime;
+  }
 })
-
-
-/*if (valor > 0) {
-  //if(valor == 1) {
-    //valor = 0;
-  //}
-  document.getElementById('restante').innerHTML = valor;
-  boton.disabled=''; //habilitar
-} else {
-  boton.disabled='disabled'; //desahabillitar
-}*/
