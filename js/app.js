@@ -3,6 +3,7 @@ window.addEventListener('load',function() {
   //version 0.0.1 - Formulario y botón twitter
   var area = document.getElementById('texto');
   var boton = document.getElementById('boton');
+  boton.style.backgroundColor = 'gray';
   var lista = document.getElementById('nuevoEspacio');
   var restante = document.getElementById('restante');
 
@@ -36,10 +37,14 @@ window.addEventListener('load',function() {
     contador = area.value.length;
     restante.textContent = max - contador;
 
-    if (contador > 0 && contador <= 140) {
+    if (contador < 1) {
+      boton.style.backgroundColor = 'gray';
+    }else if (contador > 0 && contador <= 140) {
       boton.disabled = false;
+      boton.style.backgroundColor = '#2AA2EF';
     } else {
       boton.disabled = true;
+      boton.style.backgroundColor = 'gray';
     }
 
     //version 0.0.3 - Cambia de color el contador en 120 y 130 caracteres
